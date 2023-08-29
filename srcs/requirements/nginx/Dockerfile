@@ -18,4 +18,4 @@ COPY		./conf/nginx.conf /etc/nginx/conf
 
 EXPOSE		443
 
-# CMD			["nginx", "-g", "daemon off;"]		# NECESSAIRE MAIS NE DONNE PLUS DE PROMPT/IGNORE LES CMDS DANS TERMINAL NGINX
+CMD			["nginx", "-g", "daemon off;"]
