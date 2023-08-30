@@ -1,6 +1,6 @@
-all: up
+all: build
 
-up:
+build:
 	@mkdir -p ${HOME}/inception_data/mariadb
 	@mkdir -p ${HOME}/inception_data/wordpress
 	@docker-compose -f srcs/docker-compose.yml up --build
@@ -9,12 +9,12 @@ clean: stop
 	docker system prune -a -f --volumes
 
 clear: clean
-	docker volume rm wordpress mariadb
+	docker volume rm srcs_wordpress srcs_mariadb
 
 stop:
 	docker-compose -f srcs/docker-compose.yml down
 
-re: clean all
+re: clear all
 
 show:
 	docker ps
@@ -27,4 +27,4 @@ logs:
 	docker logs nginx
 
 
-.PHONY: up clean stop re clear show logs
+.PHONY: build clean stop re clear show logs
