@@ -18,15 +18,13 @@ COPY	./conf/php.conf /etc/php/7.3/fpm/pool.d/www.conf
 RUN     mkdir -p /run/php
 RUN     chmod 755 /run/php
 
-COPY	./conf/auto_config.sh /etc/conf/auto_config.sh
-
-RUN		chmod +x /etc/conf/auto_config.sh
-
-RUN		chown -R root:root /var/www/wordpress
-
 RUN		wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 RUN		chmod +x wp-cli.phar
 RUN		mv wp-cli.phar /usr/local/bin/wp
+
+COPY	./conf/auto_config.sh /etc/conf/auto_config.sh
+
+RUN		chmod +x /etc/conf/auto_config.sh
 
 EXPOSE	9000
 

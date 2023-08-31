@@ -9,7 +9,7 @@ clean: stop
 	docker system prune -a -f --volumes
 
 clear: clean
-	docker volume rm srcs_wordpress srcs_mariadb
+	docker volume rm -f srcs_wordpress srcs_mariadb
 
 stop:
 	docker-compose -f srcs/docker-compose.yml down
