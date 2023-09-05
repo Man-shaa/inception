@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.11'
 
 services:
 
@@ -51,13 +51,13 @@ volumes:
     driver_opts:
         type: volumes
         o: bind
-        device: /home/msharifi/inception_data/mariadb
+        device: /home/msharifi/data/mysql
   wordpress:
     driver: local
     driver_opts:
         type: volumes
         o: bind
-        device: /home/msharifi/inception_data/wordpress
+        device: /home/msharifi/data/wordpress
 
 networks:
   inception:
