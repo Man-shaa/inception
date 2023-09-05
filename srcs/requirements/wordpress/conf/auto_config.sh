@@ -2,8 +2,6 @@
 
 sleep 10
 
-set -x
-
 if ! wp core is-installed --allow-root  ; then
     wp core download --allow-root --force
     wp config create --dbname=wordpress --dbuser=$MYSQL_USER \

@@ -22,12 +22,12 @@ RUN		wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.p
 RUN		chmod +x wp-cli.phar
 RUN		mv wp-cli.phar /usr/local/bin/wp
 
-COPY	./conf/auto_config.sh /etc/conf/auto_config.sh
+COPY	./conf/auto_config.sh /etc/auto_config.sh
 
-RUN		chmod +x /etc/conf/auto_config.sh
+RUN		chmod +x /etc/auto_config.sh
 
 EXPOSE	9000
 
 WORKDIR /var/www/wordpress
 
-CMD		["sh", "/etc/conf/auto_config.sh"]
+CMD		["sh", "/etc/auto_config.sh"]
