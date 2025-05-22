@@ -49,7 +49,7 @@ The setup is composed of multiple containers (NGINX, WordPress, MariaDB...), eac
 
 📁 project organization:
 
-.
+`.
 ├── Makefile
 ├── srcs/
 │   ├── .env
@@ -65,3 +65,4 @@ The setup is composed of multiple containers (NGINX, WordPress, MariaDB...), eac
 │       └── wordpress/
 │           ├── Dockerfile
 │           └── conf/
+`
