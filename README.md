@@ -46,9 +46,6 @@ The setup is composed of multiple containers (NGINX, WordPress, MariaDB...), eac
 
 ## 📁 Project Structure
 
-
-📁 project organization:
-
 ```.
 ├── Makefile
 ├── srcs/
