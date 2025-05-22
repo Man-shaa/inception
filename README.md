@@ -1,31 +1,51 @@
-# Inception  
-System Administration Project - 42  
+# 🚀 Inception  
+**System Administration Project - 42**  
 Advanced use of Docker in a virtual machine.
 
+---
+
 ## 🎯 Objective  
-Create a complete Docker infrastructure in a personal virtual machine, made up of multiple containers (NGINX, WordPress, MariaDB...) manually configured using Dockerfiles, docker-compose.yml, volumes, networks, etc.
+Create a complete Docker infrastructure inside a personal virtual machine.  
+The setup is composed of multiple containers (NGINX, WordPress, MariaDB...), each manually configured using:
 
-## 📦 Infrastructure Contents  
-  NGINX (TLSv1.2 or TLSv1.3 only, port 443)
+- Dockerfiles  
+- docker-compose.yml
+- Volumes  
+- Networks  
 
-  WordPress (with php-fpm)
+---
 
-  MariaDB
+## 📦 Infrastructure Overview  
 
-2 Volumes:
+- **NGINX**  
+  - TLSv1.2 or TLSv1.3 only  
+  - Exposes port 443  
 
-- /home/msharifi/data/mysql: WordPress database
+- **WordPress**  
+  - Uses PHP-FPM  
 
-- /home/msharifi/data/wordpress: WordPress site files
+- **MariaDB**  
 
-## ✅ Features
--Dedicated Docker network
--Automatic container restart in case of crash
--Domain name configured as msharifi.42.fr
--.env file to store environment variables
--Security: no plain-text passwords or hardcoded values in Dockerfiles
--Handwritten Dockerfiles for each service
--Makefile at the root to build images via docker-compose.yml
+- **Volumes**  
+  - `/home/msharifi/data/mysql`: database  
+  - `/home/msharifi/data/wordpress`: wordpress  
+
+---
+
+## ✅ Key Features
+
+- ✅ Dedicated Docker network
+- ✅ Automatic container restart on crash
+- ✅ Domain name configured as `msharifi.42.fr`
+- ✅ `.env` file used for environment variables
+- ✅ No plain-text passwords or credentials in Dockerfiles
+- ✅ Handwritten Dockerfiles for each service
+- ✅ Root-level `Makefile` to build and orchestrate everything via `docker-compose.yml`
+
+---
+
+## 📁 Project Structure
+
 
 📁 project organization:
 
