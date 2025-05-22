@@ -19,13 +19,13 @@ Create a complete Docker infrastructure in a personal virtual machine, made up o
 - /home/msharifi/data/wordpress: WordPress site files
 
 ## ✅ Features
-Dedicated Docker network
-Automatic container restart in case of crash
-Domain name configured as msharifi.42.fr
-.env file to store environment variables
-Security: no plain-text passwords or hardcoded values in Dockerfiles
-Handwritten Dockerfiles for each service
-Makefile at the root to build images via docker-compose.yml
+-Dedicated Docker network
+-Automatic container restart in case of crash
+-Domain name configured as msharifi.42.fr
+-.env file to store environment variables
+-Security: no plain-text passwords or hardcoded values in Dockerfiles
+-Handwritten Dockerfiles for each service
+-Makefile at the root to build images via docker-compose.yml
 
 📁 project organization:
 
